@@ -23,13 +23,14 @@ public class LibraryServiceImpl implements LibraryService {
 		for(Book book : books) {
 			if (book.getTitle().contains(keyword) || 
 				book.getAuthor().contains(keyword) || 
-				book.getIsbn().contains(keyword));{
-			    System.out.println(book.getTitle()+  book.getAuthor());
+				book.getIsbn().contains(keyword)){
+			    System.out.println("제목:"+book.getTitle()+" "+"저자:"+book.getAuthor());
 			    isSearch=true;// 플래그 값 수정
+		}
+
 		}
 		if(!isSearch) {
 			System.out.println("검색 결과가 없습니다");
-		}
 	}
 }
 		
